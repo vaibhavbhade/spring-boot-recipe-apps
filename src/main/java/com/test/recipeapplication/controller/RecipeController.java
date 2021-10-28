@@ -45,8 +45,8 @@ public class RecipeController {
 		return recipeService.findAllRecipe();
 	}
 	
-	@GetMapping("/id")
-	public RecipeDetails getRecipeDetailsbyID(Long id) throws Exception {
+	@GetMapping("/{id}")
+	public RecipeDetails getRecipeDetailsbyID(@PathVariable Long id) throws Exception {
 		
 		RecipeDetails recipeDetails = recipeService.findAllRecipeById(id);
 		if(recipeDetails==null) {
